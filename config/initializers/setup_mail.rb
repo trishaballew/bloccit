@@ -7,6 +7,6 @@ if Rails.env.development?
     user_name:       ENV['SENDGRID_USERNAME'],
     password:        ENV['SENDGRID_PASSWORD'],
     domain:          'heroku.com',
-    enable_starttls_auto: true
+    enable_arttls_auto: true
   }
 end
