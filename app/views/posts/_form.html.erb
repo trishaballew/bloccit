@@ -20,7 +20,7 @@
   <%if current_post.image? %>
     <div class="form-group">
       <p>Current image</p>
-        <%= image_tag( current_post.image.url ) %>
+        <%= image_tag( current_post.image.thumb.url ) %>
     </div>
   <% end %>
   <div class="form-group">

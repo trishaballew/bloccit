@@ -20,7 +20,7 @@
               <%= post.comments.count %> Comments
             </small>
             <div>
-              <%= image_tag(@post.user.image.thumb.url) if @post.image? %>
+              <%= image_tag(@post.image.thumb.url) if @post.image.thumb.url %>
             </div>
         </div>
       </div>
