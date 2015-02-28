@@ -1,4 +1,8 @@
+require 'paginate'
+
 class Post < ActiveRecord::Base
+  include Paginate
+
   has_many :comments
   belongs_to :user
   belongs_to :topic
@@ -16,6 +20,10 @@ class Post < ActiveRecord::Base
 
   def markdown_body
     render_as_markdown(body)
+  end
+
+  def will_paginate(page, per_page)
+    paginate(page, per_page)
   end
 
 private
