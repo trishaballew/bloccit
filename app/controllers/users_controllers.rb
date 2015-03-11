@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+    
+  end
+
   def update
     if current_user.update_attributes(user_params)
       flash[:notice] = "User information updated"
@@ -14,7 +18,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:name, :avatar)
   end
 end
 

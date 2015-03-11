@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+#<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150307152840) do
+#=======
+#ActiveRecord::Schema.define(version: 20150222134203) do
+#>>>>>>> uploading-images-assignment-2
 
   create_table "comments", force: true do |t|
     t.text     "body"
