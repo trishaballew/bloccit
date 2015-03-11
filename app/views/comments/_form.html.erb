@@ -1,8 +1,9 @@
+<h4> Add a Comment: </h4>
+
 <%= form_for [topic, post, comment] do |f| %>
-    <%= f.label :Add_A_Comment %>
   <div>
     <%= f.label :Body %>
     <%= f.text_area :body, class: 'form-control'%>
-    <%= f.submit "Create Comment", class: 'btn btn-success' %>
+    <%= f.submit "Create Comment"%>
   </div>
 <% end %>
