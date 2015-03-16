@@ -1,4 +1,5 @@
 class CommentPolicy < ApplicationPolicy
+<<<<<<< HEAD
 end
 
 def new?
@@ -10,3 +11,9 @@ def create?
 end
 
 
+=======
+  def destroy?
+    user.present? && (record.user == user || user.admin? || user.moderator?)
+  end
+end
+>>>>>>> destroy-checkpoint
