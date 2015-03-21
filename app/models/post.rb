@@ -1,13 +1,6 @@
-require 'paginate'
-
 class Post < ActiveRecord::Base
-<<<<<<< HEAD
   has_many :comments, dependent: :destroy
-=======
-  include Paginate
 
-  has_many :comments
->>>>>>> paginate-assignment
   belongs_to :user
   belongs_to :topic
 
@@ -26,10 +19,6 @@ class Post < ActiveRecord::Base
 
   def markdown_body
     render_as_markdown(body)
-  end
-
-  def will_paginate(page, per_page)
-    paginate(page, per_page)
   end
 
 private
