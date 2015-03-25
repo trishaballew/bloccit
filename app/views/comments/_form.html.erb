@@ -1,6 +1,6 @@
 <h4> Add a Comment: </h4>
 
-<%= form_for [topic, post, post.comments.build] do |f| %>
+<%= form_for [post, comment] do |f| %>
   <div>
     <%= f.label :Body %>
     <%= f.text_area :body, class: 'form-control'%>

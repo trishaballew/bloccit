@@ -24,9 +24,10 @@
   </div>
 
   <div class="col-md-4">
-    <% if policy(@comment).create? %>
     <%= render @comments %>
-    <%= render 'comments/form', topic: @topic, post: @post, comment: @comment %>
+
+    <% if policy(@post.comments.build).create? %>
+      <%= render 'comments/form', topic: @topic, post: @post, comment: @post.comments.build %>
     <% end %>
   </div>
 
