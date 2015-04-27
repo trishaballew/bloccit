@@ -22,8 +22,6 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
     @post.topic = @topic
     authorize @post
-    @comment.post = @post
-    authorize @comment
 
     if @post.save
       flash[:notice] = "Post was saved."
