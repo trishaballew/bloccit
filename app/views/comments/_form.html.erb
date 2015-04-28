@@ -2,8 +2,10 @@
 
 <%= form_for [post, comment] do |f| %>
   <div>
-    <%= f.label :Body %>
+    <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control'%>
     <%= f.submit "Create Comment"%>
-  </div>
+    </div>
+
+
 <% end %>
