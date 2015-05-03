@@ -14,13 +14,15 @@ class Post < ActiveRecord::Base
 
    mount_uploader :image, ImageUploader  
 
+   after_create :create_vote
+
       def up_votes
         votes.where(value: 1).count
       end
 
-      def down_votes
-        votes.where(value: -1).count
-      end
+#      def down_votes
+#        votes.where(value: -1).count
+#      end
 
       def points
         votes.sum(:value) 
@@ -33,18 +35,20 @@ class Post < ActiveRecord::Base
         update_attribute(:rank, new_rank)
       end
 
+      def markdown_title
+        render_as_markdown(title)
+      end
+
+      def markdown_body
+        render_as_markdown(body)
+      end
+
       def create_vote
         user.votes.create(value: 1, post: self)
       end
 end
 
-  def markdown_title
-    render_as_markdown(title)
-  end
 
-  def markdown_body
-    render_as_markdown(body)
-  end
 
 private
 

@@ -1,11 +1,10 @@
 <h4> Add a Comment: </h4>
 
-<%= form_for [post, comment] do |f| %>
+<%= form_for [@post, @post.comments.build] do |f| %>
   <div>
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control'%>
+</br> 
     <%= f.submit "Create Comment"%>
     </div>
-
-
 <% end %>
