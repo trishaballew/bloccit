@@ -16,7 +16,7 @@ module TestFactories
     user = User.new(user_options)
     user.skip_confirmation!
     user.save
-    user
+    users
   end
 
 end 
