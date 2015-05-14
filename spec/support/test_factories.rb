@@ -1,4 +1,4 @@
-module Testfactories
+module TestFactories
 
   def associated_post(options={})
    post_options = { 
@@ -18,5 +18,5 @@ module Testfactories
     user.save
     user
   end
-  
+
 end 
