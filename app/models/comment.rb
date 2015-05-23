@@ -1,4 +1,5 @@
 class Comment < ActiveRecord::Base
+  
   belongs_to :post
   belongs_to :user
 
@@ -11,7 +12,8 @@ class Comment < ActiveRecord::Base
 
   def send_favorite_emails
     post.favorites.each do |favorite|
-      FavoriteMailer.new_comment(favorite.user, post, self).deliver_now
+      FavoriteMailer.new_comment(favorite.user, post, self).deliver#_now
     end
   end
+
 end
