@@ -1,13 +1,16 @@
 module ApplicationHelper
-  def my_name
-    "Trish"
-  end
   def form_group_tag(errors, &block)
     if errors.any?
       content_tag :div, capture(&block), class: 'form-group has-error'
     else
       content_tag :div, capture(&block), class: 'form-group'
     end
+  end
+
+  def down_vote_link_classes(post)
+  end
+
+  def up_vote_link_classes(post)
   end
 
 end

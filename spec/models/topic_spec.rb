@@ -26,7 +26,7 @@ describe Topic do |variable|
     
 
       it "returns only public specs if user is nil" do
-        expect(Topic.visible_to(nil)).to eq(Topic.public)
+        expect(Topic.visible_to(nil)).to eq(Topic.publicly_viewable)
       end
     end
 
