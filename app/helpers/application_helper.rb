@@ -8,15 +8,17 @@ module ApplicationHelper
   end
 
   def down_vote_link_classes(post)
-    #"glyphicon glyphicon-chevron-down "
-    #current_user.voted(post)
-    # "voted" if vote && vote.down_vote?
+    class_base = "glyphicon glyphicon-chevron-down "
+    vote = current_user.voted(post)
+    class_base += "voted" if vote && vote.down_vote?
+    class_base
   end
 
   def up_vote_link_classes(post)
-  #"glyphicon glyphicon-chevron-up "
-  #current_user.voted(post)
-  #"voted" if vote && vote.up_vote?
+    class_base = "glyphicon glyphicon-chevron-up "
+    vote = current_user.voted(post)
+    class_base = "voted" if vote && vote.up_vote?
+    class_base
   end
 
 end
