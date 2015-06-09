@@ -58,6 +58,7 @@ group :development, :test do
   gem 'capybara'
 end
 
+gem 'newrelic_rpm'
 
 
 # Use ActiveModel has_secure_password
