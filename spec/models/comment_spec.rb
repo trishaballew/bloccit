@@ -2,13 +2,11 @@ require 'rails_helper'
 
 describe Comment do 
 
-  include TestFactories
-
   describe "after_create" do
   
   before do 
-    @post = associated_post
-    @user = authenticated_user(email_favorites: true)
+    @post = create(:post)
+    @user = create(:user)
     @other_user = authenticated_user
     @comment = Comment.new(body: 'My comment is really great', post: @post, user: @other_user)
   end
