@@ -56,9 +56,14 @@ gem 'will_paginate', '~> 3.0.5'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'database_cleaner'
 end
 
 gem 'newrelic_rpm'
+
+
+
 
 
 # Use ActiveModel has_secure_password
